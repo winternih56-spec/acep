@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Diri</title>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #89f7fe, #66a6ff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-container {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 350px;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #66a6ff;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .info {
+      text-align: left;
+      font-size: 14px;
+      color: #444;
+      margin-top: 20px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .info li {
+      margin-bottom: 8px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container">
+    <img src="https://via.placeholder.com/150" alt="Foto Profil" class="profile-pic">
+    <h1 id="nama">acep ikbal</h1>
+    <p id="bio">
+      Halo!
+    </p>
+    
+    <ul class="info">
+      <li><strong>Tempat, Tanggal Lahir:</strong> Sukabumi, 28 septembel 2007</li>
+      <li><strong>Alamat:</strong> kp.cimuncang RT/RW 001/009 kec.warungkiara kab. Sukabumi</li>
+<li><strong>email:</strong>beweacep@gmail.com</li>
+      <li><strong>Telepon:</strong> 085863683466</li>
+      <li><strong>Hobi:</strong> taeun. </li>
+    </ul>
+
+    <button id="acep">Ubah Nama</button>
+  </div>
+
+  <script>
+    document.getElementById('ubahNama').addEventListener('click', function() {
+      const namaBaru = prompt("Masukkan nama baru:");
+      if (namaBaru && namaBaru.trim() !== "") {
+        document.getElementById('nama').textContent = namaBaru;
+        alert("Nama berhasil diubah menjadi " + namaBaru + "!");
+      } else {
+        alert("Nama tidak boleh kosong!");d
+      }
+    });
+  </script>
+</body>
+</html>
